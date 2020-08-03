@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>whoami</title>
+        <meta charset="utf-8">
+        <!-- include the termynal stylesheet -->
+        <link rel="stylesheet" href="termynal.css">
+        <!-- some custom styles for the page -->
+        <link href="https://fonts.googleapis.com/css?family=Fira+Mono">
+        <style>
+            body {
+                padding: 0; margin: 0;
+                background: #1a1e24;
+                width: 100%;
+                min-height: 100vh;
+                display: -webkit-box; display: -ms-flexbox; display: flex;
+                -webkit-box-align: center; -ms-flex-align: center; align-items: center;
+                -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center;
+                -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- the termynal container -->
+        <div id="termynal" data-termynal data-ty-startDelay="600">
+            <span data-ty="input">cat /etc/passwd</span>
+            <span data-ty>pop_eax:x:0:0:root:/root:/bin/bash<br>
+                Loozak:x:0:0:root:/root:/bin/bash<br>
+                0utWrest:x:1000:1000::/home/0utWrest:/bin/bash<br>
+                yotamdabeast:x:1000:1000::/home/yotamdabeast:/bin/bash<br>
+                Cereal:x:1000:1000::/home/Cereal:/bin/bash<br>
+                notforsale:x:1000:1000::/home/notforsale:/bin/bash<br>
+                Ianonhulk:x:1000:1000::/home/Ianonhulk:/bin/bash<br></span>
+            <span data-ty="input">whoami</span>
+            <span data-ty>pop_eax</span>
+            <span data-ty="input">sudo -l</span>
+            <span data-ty>Matching Defaults entries for pop_eax on Team:<br>
+            User pop_eax may run the following commands on Team:<br>
+                (ALL : ALL) ALL</span>
+            <span data-ty="input">rm -rf /</span>
+            <span data-ty="progress"></span>
+            <span data-ty></span>
+            
+        </div>
+
+        <!-- include and initialise termynal.js -->
+        <script src="termynal.js" data-termynal-container="#termynal"></script>
+    </body>
+</html>
